@@ -1,10 +1,12 @@
 # ionic-notofication
 1. Install all the dependencies
+<pre>
 ---> ionic cordova plugin add cordova-plugin-fcm-with-dependecy-updated
 ---> npm install --save @ionic-native/fcm
+</pre>
 
 2. In app.module.ts import FCM and also write in provider
-
+<pre>
 import { FCM } from 'cordova-plugin-fcm-with-dependecy-updated/ionic/ngx'
 @NgModule({
   declarations: [AppComponent],
@@ -19,10 +21,10 @@ import { FCM } from 'cordova-plugin-fcm-with-dependecy-updated/ionic/ngx'
   bootstrap: [AppComponent]
 })
 export class AppModule {}
-
+</pre>
 
 3. In app.component.ts
-
+<pre>
 import { FCM } from 'cordova-plugin-fcm-with-dependecy-updated/ionic/ngx';
 
 initializeApp() {
@@ -44,8 +46,10 @@ initializeApp() {
     });
   }
   
-  build android and go to firebase and run the cloud messaging
+  </pre>
   
+  build android and go to firebase and run the cloud messaging
+  <pre>
   --> Go to firebase project Click on setting icon
   --> click on cloud messaging
   --> Add server key
@@ -55,5 +59,5 @@ initializeApp() {
   --> Enter title and body 
   --> click on send test message
   --> provide the fcm token key
-  
+  </pre>
   Before it app run background 
